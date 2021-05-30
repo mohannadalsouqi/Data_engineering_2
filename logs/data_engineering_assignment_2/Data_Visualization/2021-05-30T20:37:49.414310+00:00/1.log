@@ -1,0 +1,51 @@
+[2021-05-30 20:46:40,317] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_engineering_assignment_2.Data_Visualization 2021-05-30T20:37:49.414310+00:00 [queued]>
+[2021-05-30 20:46:40,340] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_engineering_assignment_2.Data_Visualization 2021-05-30T20:37:49.414310+00:00 [queued]>
+[2021-05-30 20:46:40,342] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-30 20:46:40,343] {taskinstance.py:1069} INFO - Starting attempt 1 of 2
+[2021-05-30 20:46:40,345] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-30 20:46:40,370] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): Data_Visualization> on 2021-05-30T20:37:49.414310+00:00
+[2021-05-30 20:46:40,378] {standard_task_runner.py:52} INFO - Started process 55 to run task
+[2021-05-30 20:46:40,384] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'data_engineering_assignment_2', 'Data_Visualization', '2021-05-30T20:37:49.414310+00:00', '--job-id', '30', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment_2_airflow_dags.py', '--cfg-path', '/tmp/tmp5d8gfzm7', '--error-file', '/tmp/tmpltc4b7mg']
+[2021-05-30 20:46:40,385] {standard_task_runner.py:77} INFO - Job 30: Subtask Data_Visualization
+[2021-05-30 20:46:40,471] {logging_mixin.py:104} INFO - Running <TaskInstance: data_engineering_assignment_2.Data_Visualization 2021-05-30T20:37:49.414310+00:00 [running]> on host d1b2a4d53792
+[2021-05-30 20:46:40,610] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mohannad alsouqi
+AIRFLOW_CTX_DAG_ID=data_engineering_assignment_2
+AIRFLOW_CTX_TASK_ID=Data_Visualization
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-30T20:37:49.414310+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-30T20:37:49.414310+00:00
+[2021-05-30 20:46:40,955] {__init__.py:482} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-4m48xi7k because the default path (/home/airflow/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2021-05-30 20:46:41,407] {font_manager.py:1423} INFO - Generating new fontManager, this may take some time...
+[2021-05-30 20:46:46,073] {taskinstance.py:1482} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1138, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/assignment_2_airflow_dags.py", line 120, in data_plot_visualization
+    plt.savefig('/home/airflow/data/uk_scoring_report.png')
+  File "/home/airflow/.local/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2217, in print_figure
+    **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 1639, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 512, in print_png
+    dpi=self.figure.dpi, metadata=metadata, pil_kwargs=pil_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/matplotlib/image.py", line 1611, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/PIL/Image.py", line 2169, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/airflow/data/uk_scoring_report.png'
+[2021-05-30 20:46:46,102] {taskinstance.py:1532} INFO - Marking task as UP_FOR_RETRY. dag_id=data_engineering_assignment_2, task_id=Data_Visualization, execution_date=20210530T203749, start_date=20210530T204640, end_date=20210530T204646
+[2021-05-30 20:46:46,214] {local_task_job.py:146} INFO - Task exited with return code 1

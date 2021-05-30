@@ -1,0 +1,43 @@
+[2021-05-30 19:26:48,281] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_engineering_assignment_2.Load_python_libraries 2021-05-30T19:06:32.067615+00:00 [queued]>
+[2021-05-30 19:26:48,329] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_engineering_assignment_2.Load_python_libraries 2021-05-30T19:06:32.067615+00:00 [queued]>
+[2021-05-30 19:26:48,332] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-30 19:26:48,333] {taskinstance.py:1069} INFO - Starting attempt 1 of 2
+[2021-05-30 19:26:48,336] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-30 19:26:48,362] {taskinstance.py:1089} INFO - Executing <Task(BashOperator): Load_python_libraries> on 2021-05-30T19:06:32.067615+00:00
+[2021-05-30 19:26:48,393] {standard_task_runner.py:52} INFO - Started process 48 to run task
+[2021-05-30 19:26:48,436] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'data_engineering_assignment_2', 'Load_python_libraries', '2021-05-30T19:06:32.067615+00:00', '--job-id', '18', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment_2_dags.py', '--cfg-path', '/tmp/tmpws4tcd_e', '--error-file', '/tmp/tmp9_p4j1pr']
+[2021-05-30 19:26:48,458] {standard_task_runner.py:77} INFO - Job 18: Subtask Load_python_libraries
+[2021-05-30 19:26:48,631] {logging_mixin.py:104} INFO - Running <TaskInstance: data_engineering_assignment_2.Load_python_libraries 2021-05-30T19:06:32.067615+00:00 [running]> on host d1b2a4d53792
+[2021-05-30 19:26:48,775] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mohannad alsouqi
+AIRFLOW_CTX_DAG_ID=data_engineering_assignment_2
+AIRFLOW_CTX_TASK_ID=Load_python_libraries
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-30T19:06:32.067615+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-30T19:06:32.067615+00:00
+[2021-05-30 19:26:48,781] {bash.py:135} INFO - Tmp dir root location: 
+ /tmp
+[2021-05-30 19:26:48,784] {bash.py:158} INFO - Running command: pip install sqlalchemy matplotlib sklearn
+[2021-05-30 19:26:48,813] {bash.py:169} INFO - Output:
+[2021-05-30 19:26:50,072] {bash.py:173} INFO - WARNING: The directory '/home/airflow/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+[2021-05-30 19:26:50,308] {bash.py:173} INFO - Requirement already satisfied: sqlalchemy in /home/airflow/.local/lib/python3.6/site-packages (1.3.24)
+[2021-05-30 19:26:50,342] {bash.py:173} INFO - Requirement already satisfied: matplotlib in /home/airflow/.local/lib/python3.6/site-packages (3.3.4)
+[2021-05-30 19:26:50,360] {bash.py:173} INFO - Requirement already satisfied: sklearn in /home/airflow/.local/lib/python3.6/site-packages (0.0)
+[2021-05-30 19:26:50,366] {bash.py:173} INFO - Requirement already satisfied: numpy>=1.15 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (1.19.5)
+[2021-05-30 19:26:50,373] {bash.py:173} INFO - Requirement already satisfied: python-dateutil>=2.1 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (2.8.1)
+[2021-05-30 19:26:50,383] {bash.py:173} INFO - Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (2.4.7)
+[2021-05-30 19:26:50,388] {bash.py:173} INFO - Requirement already satisfied: cycler>=0.10 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (0.10.0)
+[2021-05-30 19:26:50,394] {bash.py:173} INFO - Requirement already satisfied: pillow>=6.2.0 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (8.2.0)
+[2021-05-30 19:26:50,400] {bash.py:173} INFO - Requirement already satisfied: kiwisolver>=1.0.1 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (1.3.1)
+[2021-05-30 19:26:50,404] {bash.py:173} INFO - Requirement already satisfied: scikit-learn in /home/airflow/.local/lib/python3.6/site-packages (from sklearn) (0.24.2)
+[2021-05-30 19:26:50,482] {bash.py:173} INFO - Requirement already satisfied: six>=1.5 in /home/airflow/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib) (1.15.0)
+[2021-05-30 19:26:50,486] {bash.py:173} INFO - Requirement already satisfied: scipy>=0.19.1 in /home/airflow/.local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.5.4)
+[2021-05-30 19:26:50,493] {bash.py:173} INFO - Requirement already satisfied: threadpoolctl>=2.0.0 in /home/airflow/.local/lib/python3.6/site-packages (from scikit-learn->sklearn) (2.1.0)
+[2021-05-30 19:26:50,501] {bash.py:173} INFO - Requirement already satisfied: joblib>=0.11 in /home/airflow/.local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.0.1)
+[2021-05-30 19:27:10,517] {bash.py:173} INFO - WARNING: You are using pip version 20.2.4; however, version 21.1.2 is available.
+[2021-05-30 19:27:10,520] {bash.py:173} INFO - You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[2021-05-30 19:27:10,789] {bash.py:177} INFO - Command exited with return code 0
+[2021-05-30 19:27:10,885] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=data_engineering_assignment_2, task_id=Load_python_libraries, execution_date=20210530T190632, start_date=20210530T192648, end_date=20210530T192710
+[2021-05-30 19:27:11,055] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-30 19:27:11,165] {local_task_job.py:146} INFO - Task exited with return code 0

@@ -1,0 +1,24 @@
+[2021-05-30 20:53:44,674] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_engineering_assignment_2.Data_Visualization 2021-05-30T20:37:49.414310+00:00 [queued]>
+[2021-05-30 20:53:44,739] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: data_engineering_assignment_2.Data_Visualization 2021-05-30T20:37:49.414310+00:00 [queued]>
+[2021-05-30 20:53:44,746] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-30 20:53:44,749] {taskinstance.py:1069} INFO - Starting attempt 2 of 2
+[2021-05-30 20:53:44,751] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-30 20:53:44,774] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): Data_Visualization> on 2021-05-30T20:37:49.414310+00:00
+[2021-05-30 20:53:44,788] {standard_task_runner.py:52} INFO - Started process 45 to run task
+[2021-05-30 20:53:44,800] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'data_engineering_assignment_2', 'Data_Visualization', '2021-05-30T20:37:49.414310+00:00', '--job-id', '32', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/assignment_2_dags.py', '--cfg-path', '/tmp/tmpb18tx7qw', '--error-file', '/tmp/tmp8l54gw7_']
+[2021-05-30 20:53:44,816] {standard_task_runner.py:77} INFO - Job 32: Subtask Data_Visualization
+[2021-05-30 20:53:44,932] {logging_mixin.py:104} INFO - Running <TaskInstance: data_engineering_assignment_2.Data_Visualization 2021-05-30T20:37:49.414310+00:00 [running]> on host d1b2a4d53792
+[2021-05-30 20:53:45,019] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Mohannad alsouqi
+AIRFLOW_CTX_DAG_ID=data_engineering_assignment_2
+AIRFLOW_CTX_TASK_ID=Data_Visualization
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-30T20:37:49.414310+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-05-30T20:37:49.414310+00:00
+[2021-05-30 20:53:45,083] {__init__.py:482} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-u_avh4kq because the default path (/home/airflow/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2021-05-30 20:53:45,300] {font_manager.py:1423} INFO - Generating new fontManager, this may take some time...
+[2021-05-30 20:53:48,345] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-30 20:53:48,365] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=data_engineering_assignment_2, task_id=Data_Visualization, execution_date=20210530T203749, start_date=20210530T205344, end_date=20210530T205348
+[2021-05-30 20:53:48,425] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-05-30 20:53:48,491] {local_task_job.py:146} INFO - Task exited with return code 0
